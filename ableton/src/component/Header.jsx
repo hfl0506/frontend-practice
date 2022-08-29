@@ -4,6 +4,7 @@ const HeaderWrapper = styled.div`
   height: 80px;
   display: flex;
   align-items: center;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0.6);
 `;
 
 const HeroWrapper = styled.div`

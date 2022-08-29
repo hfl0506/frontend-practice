@@ -5,11 +5,13 @@ const StickyStyle = `
     postion: fixed;
     top: 0;
     width: 100%;
+    opacity: 0.6;
 `;
 
 const StickyHeaderNav = styled.nav`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 80px;
   width: 120px;
   padding: 0px 20px;

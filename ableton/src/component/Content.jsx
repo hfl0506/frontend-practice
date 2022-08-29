@@ -1,8 +1,19 @@
+import styled from "styled-components";
+import TopContent from "./TopContent";
+import MidContent from "./MidContent";
+
+const ContentWrapper = styled.div`
+  height: 1500px;
+  display: grid;
+  gap: 50px;
+`;
+
 function Content() {
   return (
-    <div>
-      <h1>Content</h1>
-    </div>
+    <ContentWrapper>
+      <TopContent />
+      <MidContent />
+    </ContentWrapper>
   );
 }
 
