@@ -4,16 +4,34 @@ import TopContentImg from "../assets/top-content-img.jpg";
 const TopContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: auto;
 
   a {
     color: #0000ff;
     text-decoration: none;
   }
+`;
+
+const ImageWrapper = styled.div`
+  height: auto;
+  width: auto;
+  margin: auto;
+  position: relative;
   img {
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
     margin: auto;
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff764d;
   }
 `;
 
@@ -36,7 +54,10 @@ const SecondParagraph = styled(Paragraph)`
 function TopContent() {
   return (
     <TopContentWrapper>
-      <img src={TopContentImg} />
+      <ImageWrapper>
+        <span>Ableton</span>
+        <img src={TopContentImg} />
+      </ImageWrapper>
       <FirstParagraph>
         We make <a href="/">Live</a>, <a href="/">Push</a> and{" "}
         <a href="/">Link</a> — unique software and hardware for music creation

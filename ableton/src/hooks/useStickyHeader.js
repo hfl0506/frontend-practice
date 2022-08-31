@@ -5,7 +5,7 @@ function useStickyHeader() {
 
   const toggleSticky = useCallback(() => {
     const scrollTop = window.scrollY;
-    scrollTop >= 200 ? setIsSticky(true) : setIsSticky(false);
+    scrollTop >= 80 ? setIsSticky(true) : setIsSticky(false);
   }, [isSticky]);
 
   useEffect(() => {

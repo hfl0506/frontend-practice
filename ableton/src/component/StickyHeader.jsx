@@ -2,22 +2,23 @@ import styled, { css } from "styled-components";
 import useStickyHeader from "../hooks/useStickyHeader";
 
 const StickyStyle = `
-    postion: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
-    opacity: 0.6;
+    opacity: 0.9;
+    padding-top: 20px;
+    transition: all 0.5s;
+    z-index: 20; 
 `;
 
 const StickyHeaderNav = styled.nav`
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 80px;
-  width: 120px;
+  height: 60px;
   padding: 0px 20px;
+  background-color: white;
   a {
     color: black;
     text-decoration: none;
+    padding-right: 20px;
   }
   a:first-child {
     color: #ff764d;

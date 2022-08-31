@@ -19,19 +19,33 @@ const ImgWrapper = styled.div`
   width: 800px;
   display: flex;
   justify-content;
+`;
 
-  img {
-    width: 200px;
-    height: 100px;
-  }
+const ImgSelf = styled.img`
+  position: absolute;
+`;
+
+const LeftImg = styled(ImgSelf)`
+  width: 300px;
+  height: 250px;
+  left: 20%;
+`;
+
+const RightImg = styled(ImgSelf)`
+  width: 150px;
+  height: 85px;
+  left: 65%;
+  z-index: 10;
+  transform: translateY(50);
 `;
 
 const YellowBox = styled.div`
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   background-color: #fbffa7;
-  z-index: -1;
   margin-left: 100px;
+  position: absolute;
+  left: 50%;
 `;
 
 function MidContent() {
@@ -39,8 +53,8 @@ function MidContent() {
     <MidContentWrapper>
       <ImgWrapper>
         <YellowBox className="yellow-box"></YellowBox>
-        <img src={MidContent1} />
-        <img src={MidContent2} />
+        <LeftImg src={MidContent1} />
+        <RightImg src={MidContent2} />
       </ImgWrapper>
       <p>
         Making music isn’t easy. It takes time, effort, and learning. But when
